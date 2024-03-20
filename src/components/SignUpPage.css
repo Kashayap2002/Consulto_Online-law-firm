@@ -1,58 +1,71 @@
 .signup-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items at the start of the cross axis */
-    height: 80vh; /* Reduced height */
-  }
-  
-  .signup-form,
-  .login-form {
-    width: 45%;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .signup-form {
-    height: 100%; /* Occupy full height of the container */
-  }
-  
-  .signup-form h2,
-  .login-form h2 {
-    margin-bottom: 20px;
-  }
-  
-  .signup-form label,
-  .login-form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .signup-form input,
-  .signup-form select,
-  .signup-form textarea,
-  .login-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .signup-form button,
-  .login-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .signup-form button:hover,
-  .login-form button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  padding-left: 53%; /* Align content to the right */
+  align-items: left; /* Align items to the left vertically */
+  height: 20% /* Reduced height */
+  /* Add some padding to the right side */
+}
+
+.signup-form,
+.login-form {
+  width: 300px; /* Set a fixed width */
+  padding: 7px; /* Increased padding */
+  background-color:#b49f8b;  /* #96765D Brown color */
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+  margin-top: 60px; /* Add top margin to create space */
+}
+
+.signup-form h2,
+.login-form h2 {
+  margin-bottom: 30px;
+  text-align: center; /* Center heading */
+  color: #fff; /* White color for headings */
+}
+
+.signup-form label,
+.login-form label {
+  display: block;
+  margin-bottom: 15px;
+  color: #fff; /* White color for labels */
+}
+
+.signup-form input,
+.signup-form select,
+.signup-form textarea,
+.login-form input {
+  width: 60%; /* Full width */
+  padding: 7px; /* Reduced padding */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.signup-form button,
+.login-form button {
+  width: 60%;
+  padding: 7px;
+  background-color: #CD853F; /* Darker brown color for buttons */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-form button:hover,
+.login-form button:hover {
+  background-color: #96765D; /* Lighter brown color on hover */
+}
+
+.login-link a {
+  color:#ffffff; /* Change the color of the link */
+  text-decoration: underline; /* Add underline */
+  font-weight: bold; /* Make the text bold */
+}
+
+.login-link a:hover {
+  text-decoration: none; /* Remove underline on hover */
+}

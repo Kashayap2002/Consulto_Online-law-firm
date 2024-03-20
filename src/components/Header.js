@@ -12,7 +12,7 @@ function Header() {
         <ul>
         <li><Link to="/LandingPage">Home</Link></li>
           <li><Link to="/services">Services</Link></li>
-          <li><Link to="/signup">Sign Up</Link></li>
+          <li><Link to="/signup">Register</Link></li>
         </ul>
       </nav>
     </header>
