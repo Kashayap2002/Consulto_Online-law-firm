@@ -1,45 +1,40 @@
 import React, { useState } from 'react';
+import backgroundImage from './signup.svg';
 import './SignUpPage.css';
 
 function SignUpPage() {
+  const [username, setUsername] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [selectedServices, setSelectedServices] = useState([]);
-  const [description, setDescription] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSignUp = (e) => {
     e.preventDefault();
     // Add signup logic here
     console.log('Signing up with:', {
+      username,
       name,
       email,
       phoneNumber,
-      selectedServices,
-      description,
       password
     });
   };
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    // Add login logic here
-    console.log('Logging in with email:', email, 'and password:', password);
-  };
-
-  const servicesOptions = [
-    "Option 1",
-    "Option 2",
-    "Option 3",
-    // Add more options...
-  ];
-
   return (
-    <div className="signup-container">
+    <div className="signup-container" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', color: 'white', textAlign: 'center', overflowY: 'hidden', overflowX: 'hidden' }}>
       <div className="signup-form">
-        <h2>Sign Up</h2>
+      
         <form onSubmit={handleSignUp}>
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -67,28 +62,6 @@ function SignUpPage() {
             onChange={(e) => setPhoneNumber(e.target.value)}
             required
           />
-          <label htmlFor="selectedServices">Services Needed:</label>
-          <select
-            id="selectedServices"
-            name="selectedServices"
-            multiple
-            value={selectedServices}
-            onChange={(e) => setSelectedServices(Array.from(e.target.selectedOptions, (option) => option.value))}
-            required
-          >
-            {servicesOptions.map((option, index) => (
-              <option key={index} value={option}>{option}</option>
-            ))}
-          </select>
-          <label htmlFor="description">Description of Case:</label>
-          <textarea
-            id="description"
-            name="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            rows="4"
-            required
-          />
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -99,31 +72,9 @@ function SignUpPage() {
             required
           />
           <button type="submit">Sign Up</button>
-        </form>
-      </div>
-
-      <div className="login-form">
-        <h2>Login</h2>
-        <form onSubmit={handleLogin}>
-          <label htmlFor="login-email">Email:</label>
-          <input
-            type="email"
-            id="login-email"
-            name="login-email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <label htmlFor="login-password">Password:</label>
-          <input
-            type="password"
-            id="login-password"
-            name="login-password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit">Login</button>
+          <div className="login-link">
+            <p>Already have an account? <a href="/login">Login here</a></p>
+          </div>
         </form>
       </div>
     </div>
