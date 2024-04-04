@@ -1,0 +1,57 @@
+/* profile.css */
+.content-container {
+  display: flex;
+  background: linear-gradient(135deg, #e0e0e0, #f0f0f0); /* Subtle gradient color */
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-details {
+  width: 30%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details h2 {
+  margin-bottom: 20px;
+}
+
+.profile-details p {
+  margin-bottom: 10px;
+}
+
+.cases-section {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-case {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.add-case input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-case button {
+  padding: 10px 20px;
+  background-color: #CD853F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-case button:hover {
+  background-color: #96765D;
+}

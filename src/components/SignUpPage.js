@@ -1,30 +1,50 @@
-import React, { useState } from 'react';
-import backgroundImage from './signup.svg';
-import './SignUpPage.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import backgroundImage from "./signup.svg";
+import "./SignUpPage.css";
 
 function SignUpPage() {
-  const [username, setUsername] = useState('');
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Hook for navigation
+
+  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSignUp = (e) => {
     e.preventDefault();
     // Add signup logic here
-    console.log('Signing up with:', {
+    console.log("Signing up with:", {
       username,
       name,
       email,
       phoneNumber,
-      password
+      password,
     });
+
+    navigate("/profile"); // Navigate to the profile page route
   };
 
   return (
-    <div className="signup-container" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', color: 'white', textAlign: 'center', overflowY: 'hidden', overflowX: 'hidden' }}>
+    <div
+      className="signup-container"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        color: "white",
+        textAlign: "center",
+        overflowY: "hidden",
+        overflowX: "hidden",
+      }}
+    >
       <div className="signup-form">
-      
         <form onSubmit={handleSignUp}>
           <label htmlFor="username">Username:</label>
           <input
@@ -73,7 +93,9 @@ function SignUpPage() {
           />
           <button type="submit">Sign Up</button>
           <div className="login-link">
-            <p>Already have an account? <a href="/login">Login here</a></p>
+            <p>
+              Already have an account? <a href="/login">Login here</a>
+            </p>
           </div>
         </form>
       </div>

@@ -1,34 +1,46 @@
-/* Header CSS */
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Pridi", serif;
+}
+
 .header {
-    background: radial-gradient(circle, hsla(31, 58%, 84%, 0.8), rgba(216, 176, 140, 0.8)); 
-    padding: 10px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    width: 98.9%;
-  }
-  
-  /* Navigation bar */
-  .nav {
-    width: 29%; /* Adjust the width as needed */
-  }
-  
-  /* Reset list styles for better navigation layout */
-  .nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Display list items horizontally */
-  .nav ul li {
-    display: inline;
-    margin-left: 10px;
-  }
-  
-  /* Styling anchor links inside list items */
-  .nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
+  background: radial-gradient(circle, hsla(31, 58%, 84%, 0.8), rgba(216, 176, 140, 0.8));
+  padding: 10px 3rem; /* Adjusted padding */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 80px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Display list items horizontally */
+}
+
+
+.nav ul li {
+  margin-left: 20px; 
+}
+
+
+.nav ul li a {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s ease-out;
+}
+
+.nav a:hover {
+  color: white;
+}
