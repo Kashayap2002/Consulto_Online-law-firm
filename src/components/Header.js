@@ -5,10 +5,8 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header className="header">
-      <marquee className="marquee" behavior="scroll" direction="left">
-        <h1>Welcome to CONSULTO</h1>
-      </marquee>
-      <nav className="nav"> {/* Add the "nav" class here */}
+      <h3>Consulto</h3>
+      <nav className="nav"> 
         <ul>
         <li><Link to="/LandingPage">Home</Link></li>
           <li><Link to="/services">Services</Link></li>
