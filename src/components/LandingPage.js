@@ -22,12 +22,12 @@ function LandingPage() {
       }}
     >
       {/* Other components */}
-      <a href="#Services">
+      {/* <a href="#Services">
         <img
           src={process.env.PUBLIC_URL + "/Services_button.SVG"}
           alt="Click here"
         />
-      </a>
+      </a> */}
     </div>
   );
 }
