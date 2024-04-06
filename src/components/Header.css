@@ -15,7 +15,11 @@
   width: 100%;
   justify-content: space-between;
   height: 80px;
-  /* position: fixed; */
+  position: sticky;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 h3 {
