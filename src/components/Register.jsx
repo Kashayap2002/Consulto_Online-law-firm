@@ -98,7 +98,7 @@ function Login() {
           username: data.username,
           email: data.loginIdentifier,
           password: data.password,
-          fullname: data.fullname,
+          name: data.name,
         });
 
         console.log(response);
@@ -147,10 +147,10 @@ function Login() {
           <StyledTextField
             variant="filled"
             placeholder="Name"
-            name="fullname"
-            {...register("fullname")}
-            error={!!errors.fullname}
-            helperText={errors.fullname?.message}
+            name="name"
+            {...register("name")}
+            error={!!errors.name}
+            helperText={errors.name?.message}
           />
         )}
         <StyledTextField

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import { Toaster } from "react-hot-toast";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import ServicesPage from "./components/ServicesPage";
@@ -26,6 +26,7 @@ const MUItheme = createTheme({
 function App() {
   return (
     <MUIThemeProvider theme={MUItheme}>
+      <Toaster />
       <Router>
         <div className="app">
           <Header />
