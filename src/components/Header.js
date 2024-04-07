@@ -1,8 +1,16 @@
 import React from "react";
+import { toast } from "react-hot-toast";
 import "./Header.css";
 import { Link } from "react-router-dom";
 
 function Header() {
+  const handleLogout = () => {
+    window.localStorage.clear();
+    toast.success("Logged Out successfully! 😀");
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
+  };
   return (
     <header className="header">
       <h3
@@ -21,6 +29,14 @@ function Header() {
           </li>
           <li>
             <Link to="/signup">Register</Link>
+          </li>
+          <li>
+            <Link to="/profile">Profile</Link>
+          </li>
+          <li>
+            <div onClick={handleLogout} style={{ cursor: "pointer" }}>
+              Logout
+            </div>
           </li>
         </ul>
       </nav>

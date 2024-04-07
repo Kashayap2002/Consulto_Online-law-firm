@@ -124,7 +124,7 @@ function Login() {
         if (status === 1) {
           localStorage.setItem("jwtToken", token);
           toast.success(message);
-          navigate("/");
+          navigate("/profile");
         } else {
           console.log(message);
           toast.error(message);
