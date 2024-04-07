@@ -49,7 +49,9 @@ function Profile() {
     console.log(value);
 
     axios
-      .post("/api/updateProfile", value)
+      .post("/api/updateProfile", value, {
+        headers: { Authorization: window.localStorage.getItem("jwtToken") },
+      })
       .then((response) => {
         const { status, message } = response.data;
         console.log(response);
@@ -76,7 +78,9 @@ function Profile() {
 
   const handleProfile = () => {
     axios
-      .get("/api/me")
+      .get("/api/me", {
+        headers: { Authorization: window.localStorage.getItem("jwtToken") },
+      })
       .then((response) => {
         console.log(response.data.data);
         setValue(response.data.data);
