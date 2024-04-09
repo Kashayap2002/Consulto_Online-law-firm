@@ -28,6 +28,9 @@ function Header() {
             <Link to="/services">Services</Link>
           </li>
           <li>
+            <Link to="/ForLawyer">ForLawyers</Link>
+          </li>
+          <li>
             <Link to="/signup">Register</Link>
           </li>
           <li>

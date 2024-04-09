@@ -1,0 +1,68 @@
+/* ForLawyer.css */
+
+.lawyer-container {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 0 20px; /* Added padding to create space around content */
+  }
+  
+  .paragraph-container {
+    background-color: rgba(180, 129, 107, 0.8); /* Background color for the paragraph container */
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 400px; /* Set the width of the paragraph container */
+    height: 200px; /* Set the height of the paragraph container to make it square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ 
+  
+  .feature-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; /* Added margin between feature buttons and other elements */
+  }
+  
+  .feature-button {
+    background-color: #2B2215; /* Updated button color */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Increased button padding for better touch experience */
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px; /* Added margin between buttons */
+  }
+  
+  .feature-button:hover {
+    background-color: #3F3525; /* Updated button hover color */
+  }
+  
+  .cta-section {
+    margin-top: 40px;
+  }
+  .cta-section p {
+    margin-top: -10%; /* Adjust the margin-top value as needed */
+    
+  }
+  .cta-button {
+    background-color: #3F3525;
+    
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Increased button padding for better touch experience */
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Remove default underline for links */
+    transition: background-color 0.3s ease; /* Added transition for smoother hover effect */
+  }
