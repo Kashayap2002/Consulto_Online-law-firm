@@ -4,11 +4,13 @@ import { Toaster } from "react-hot-toast";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import ServicesPage from "./components/ServicesPage";
+import ForLawyer from "./components/ForLawyer";
 // import SignUpPage from "./components/SignUpPage";
 // import LoginPage from "./components/LoginPage";
 import ProfilePage from "./components/MainProfile";
 import ProtectedRoute from "./ProtectedRoute";
 import Register from "./components/Register";
+
 import { createTheme, ThemeProvider as MUIThemeProvider } from "@mui/material";
 
 import "./App.css";
@@ -34,6 +36,7 @@ function App() {
             <Route exact path="/" element={<LandingPage />} />
             <Route path="/LandingPage" element={<LandingPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/forlawyer" element={<ForLawyer />} />
             {/* <Route path="/signup" element={<SignUpPage />} /> */}
             <Route path="/signup" element={<Register />} />
             {/* <Route path="/login" element={<LoginPage />} /> */}
